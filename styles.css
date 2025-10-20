@@ -276,6 +276,7 @@ nav a:hover {
 .certificates h2 {
   font-size: 32px;
   background: linear-gradient(to right, rgb(117, 117, 233), rgb(255, 0, 255));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 2px;
