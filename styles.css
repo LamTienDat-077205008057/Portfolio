@@ -524,3 +524,158 @@ nav a:hover {
   filter: drop-shadow(0 0 15px #ff73ff);
 }
 
+/* Tablet (<= 1024px) */
+@media (max-width: 1024px) {
+  nav a {
+    left: 0;
+    display: inline-block;
+    margin: 8px 12px;
+    font-size: 18px;
+  }
+
+  .main {
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 50px;
+  }
+
+  .profile-picture {
+    width: 16rem;
+    height: 21rem;
+  }
+
+  .middle {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .gym-picture {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .project-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-left: 0;
+  }
+
+  .image-row {
+    gap: 50px;
+  }
+
+  .contact {
+    margin-left: auto;
+    width: 90%;
+  }
+}
+
+/* Điện thoại (<= 768px) */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(11, 12, 42, 0.8);
+    border-radius: 15px;
+    padding: 10px 0;
+  }
+
+  nav a {
+    position: static;
+    margin: 6px 0;
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .main {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .profile {
+    width: 100%;
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .self {
+    width: 90%;
+    height: auto;
+  }
+
+  .middle {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .middle-content p {
+    font-size: 16px;
+  }
+
+  .language-skill,
+  .project {
+    padding: 20px;
+    width: 95%;
+  }
+
+  .image-row {
+    gap: 20px;
+  }
+
+  .skill-image,
+  .project-image {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .contact {
+    margin: 40px auto;
+    width: 90%;
+    padding: 30px 10px;
+  }
+
+  .social-icons {
+    gap: 20px;
+  }
+
+  .social-icon img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Màn hình rất nhỏ (<= 480px) */
+@media (max-width: 480px) {
+  .profile-picture {
+    width: 12rem;
+    height: 16rem;
+  }
+
+  .profile h2,
+  .middle-content h2,
+  .section-content h2,
+  .contact h2 {
+    font-size: 22px;
+  }
+
+  .profile p,
+  .middle-content p,
+  .section-content p {
+    font-size: 15px;
+  }
+
+  .skill-bars .bar {
+    height: 18px;
+  }
+
+  .skill-bars .percent {
+    font-size: 12px;
+  }
+}
