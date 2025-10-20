@@ -249,6 +249,60 @@ nav a:hover {
   box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
 }
 
+/* ===================== CERTIFICATES & AWARDS ===================== */
+.certificates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 20px;
+  width: 90%;
+  max-width: 1250px;
+  margin: 100px auto 0 auto;
+  border: 2px solid rgb(182, 92, 231);
+  border-radius: 20px;
+  background-color: rgba(11, 12, 42, 0.6);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.certificates:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.8);
+  transform: scale(1.02);
+}
+
+.certificates h2 {
+  font-size: 32px;
+  background: linear-gradient(to right, rgb(117, 117, 233), rgb(255, 0, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.certificates h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff73ff, transparent);
+  border-radius: 2px;
+}
+
+.certificates p {
+  font-size: 20px;
+  color: #ddd;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+
 /* ===================== LANGUAGE / SKILL ===================== */
 /* --- Cấu trúc chung cho các section mới --- */
 .language-skill, .project {
