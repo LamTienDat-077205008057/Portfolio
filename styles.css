@@ -1,0 +1,526 @@
+/*  Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Toàn trang */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+  line-height: 1.6;
+  background: radial-gradient(ellipse farthest-corner at center, #0A1277 0%, #000 100%);
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/*  Khung tổng */
+.container {
+  max-width: 1500px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid rgb(182, 92, 231);
+  border-radius: 20px;
+  background-color: rgba(11, 12, 42, 0.5); 
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4), 
+              0 0 30px rgba(117, 117, 233, 0.2);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+/*  Thanh điều hướng */
+nav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: lightblue;
+  position: relative;
+  left: 60%;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a::after {
+  content: " | ";
+  color: lightblue;
+  transition: none;
+}
+
+nav a:last-child::after {
+  content: "";
+}
+
+nav a:hover {
+  color: blue;
+  transform: scale(1.12);
+}
+
+/*  Khu vực chính */
+.main {
+  display: flex;
+  align-items: flex-start; /* Căn đầu hàng trên */
+  justify-content: center; /* Giữa khung hình */
+  flex-wrap: wrap; 
+  gap: 170px; 
+  margin-top: 105px;
+}
+
+/* Ảnh */
+.profile-picture {
+  width: 20rem;
+  height: 27rem;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.profile-picture:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.8);
+}
+
+/* Khung Profile */
+.profile {
+  flex: 1; /* Tự co giãn theo không gian còn lại */
+  min-width: 350px;
+  max-width: 825px;
+  padding: 25px 40px;
+  border: 2px solid rgb(182, 92, 231);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+  background-color: rgba(11, 12, 42, 0.6);
+  backdrop-filter: blur(6px);
+  color: #ddd;
+  transition: all 0.3s ease;
+}
+
+/* Khi hover, sáng hơn nhẹ */
+.profile:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.8);
+  transform: scale(1.02);
+}
+
+.profile h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, rgb(117, 117, 233), rgb(255, 0, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.profile h2::after {
+  content: "";
+  position: absolute;
+  left: 25%;
+  bottom: -8px;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff73ff, transparent);
+  border-radius: 2px;
+}
+
+/* Nội dung Profile */
+.profile p {
+  font-size: 18px;
+  margin: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.6;
+}
+
+/* Dấu chấm đầu dòng */
+.profile p::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ff73ff;
+  font-size: 22px;
+  text-shadow: 0 0 8px #ff73ff;
+}
+
+.self{
+  width: 15rem;
+  height: 10rem;
+  border-radius: 15px;
+  object-fit:cover;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.self:hover{
+  transform: scale(1.5);
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.8);
+}
+
+.middle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 30px 50px;
+  width: 90%;
+  max-width: 1250px;
+  border: 2px solid rgb(182, 92, 231);
+  border-radius: 20px;
+  background-color: rgba(11, 12, 42, 0.6);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+  margin: 100px auto 0 auto;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.middle:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.8);
+  transform: scale(1.02);
+}
+
+/* Phần chữ — sát bên trái */
+.middle-content {
+  flex: 1;
+  text-align: left;
+  margin-right: auto;
+}
+
+.middle-content h2 {
+  font-size: 30px;
+  text-align: center; /* 👈 căn giữa chữ */
+  margin-bottom: 20px;
+  background: linear-gradient(to right, rgb(117, 117, 233), rgb(255, 0, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+/* Gạch chân căn giữa */
+.middle-content h2::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* 👈 bắt đầu từ giữa */
+  bottom: -8px;
+  transform: translateX(-50%); /* 👈 dịch lại để gạch đúng giữa */
+  width: 50%; /* độ dài của gạch */
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff73ff, transparent);
+  border-radius: 2px;
+}
+
+/* Nội dung */
+.middle-content p {
+  font-size: 18px;
+  margin: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.middle-content p::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ff73ff;
+  font-size: 22px;
+  text-shadow: 0 0 8px #ff73ff;
+}
+
+/* Ảnh nằm bên phải */
+.gym-picture {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+}
+
+/* ===================== LANGUAGE / SKILL ===================== */
+/* --- Cấu trúc chung cho các section mới --- */
+.language-skill, .project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 50px;
+  width: 90%;
+  max-width: 1250px;
+  margin: 100px auto 0 auto;
+  border: 2px solid rgb(182, 92, 231);
+  border-radius: 20px;
+  background-color: rgba(11, 12, 42, 0.6);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.language-skill:hover, .project:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.8);
+  transform: scale(1.02);
+}
+
+.skill-bars {
+  width: 85%;
+  margin: 10px auto;
+}
+
+.skill-bars .bar {
+  margin-bottom: 25px;
+}
+
+.skill-bars .info {
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+  font-size: 16px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Thanh nền */
+.skill-bars .bar {
+  background: rgba(255, 255, 255, 0.1);
+  height: 25px;
+  margin: 15px;
+  border-radius: 10px;
+  position: relative;
+  text-align: left; 
+  direction: ltr;   
+}
+
+/* Thanh chạy */
+.skill-bars .bar span {
+  display: block;             
+  height: 100%;
+  width: 0;             
+  background: linear-gradient(90deg, #ff73ff, #b57eff);
+  box-shadow: 0 0 10px #ff73ff, 0 0 20px #b57eff;
+  border-radius: 10px;
+  transition: width 1.2s ease;
+  animation: grow 1.2s forwards;
+  transform-origin: left;  
+}
+
+/* Từng thanh có độ trễ animation khác nhau */
+.skill-bars .bar:nth-child(1) span {
+  --w: 80%;
+  animation: grow 1s forwards 0.2s;
+}
+.skill-bars .bar:nth-child(2) span {
+  --w: 60%;
+  animation: grow 1s forwards 0.4s;
+}
+.skill-bars .bar:nth-child(3) span {
+  --w: 40%;
+  animation: grow 1s forwards 0.6s;
+}
+
+/* Animation chạy */
+@keyframes grow {
+  to { width: var(--w); }
+}
+
+/* Hiển thị phần trăm nằm trên đầu thanh */
+.skill-bars .percent {
+  position: absolute;
+  right: 0;
+  top: -25px;
+  font-size: 14px;
+  color: #ffb7ff;
+  text-shadow: 0 0 6px #ff73ff;
+}
+
+/* Hiệu ứng hover */
+.skill-bars .bar span:hover {
+  filter: brightness(1.3) drop-shadow(0 0 10px #ff73ff);
+  transition: 0.3s;
+}
+  
+/* --- Phần text --- */
+.section-content {
+  text-align: left;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.section-content h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, rgb(117, 117, 233), rgb(255, 0, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.section-content h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff73ff, transparent);
+  border-radius: 2px;
+}
+
+.section-content p {
+  font-size: 18px;
+  margin: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.section-content p::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ff73ff;
+  font-size: 22px;
+  text-shadow: 0 0 8px #ff73ff;
+}
+
+/* --- Hàng ảnh bên dưới --- */
+  .image-row {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+/* --- Ảnh Skill & Project --- */
+.skill-image, .project-image {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 15px;
+  object-fit: contain;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.skill-image:hover, .project-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.8);
+}
+
+.project-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 110px;
+  padding-left: 25px;
+}
+
+.project-links a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #a6baff;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.project-links a::before {
+  content: "🔗";
+  margin-right: 8px;
+  opacity: 0.8;
+}
+
+.project-links a:hover {
+  color: #ff73ff;
+  transform: translateX(5px);
+  text-shadow: 0 0 8px #ff73ff;
+}
+
+/* --- CONTACT --- */
+.contact {
+  text-align: center;
+  margin-top: 120px;
+  padding: 50px 20px;
+  border: 2px solid rgb(182, 92, 231);
+  border-radius: 20px;
+  background-color: rgba(11, 12, 42, 0.6);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  width: 80%;
+  max-width: 1000px;
+  margin-left: 225px;
+  margin-right: auto;
+}
+
+.contact:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.8);
+  transform: scale(1.02);
+}
+
+.contact h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, rgb(117, 117, 233), rgb(255, 0, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.contact h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff73ff, transparent);
+  border-radius: 2px;
+}
+
+.contact p {
+  color: #ddd;
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+/* Biểu tượng mạng xã hội */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.social-icon img {
+  width: 45px;
+  height: 45px;
+  filter: drop-shadow(0 0 5px rgba(255, 0, 255, 0.5));
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.social-icon img:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 15px #ff73ff);
+}
+
