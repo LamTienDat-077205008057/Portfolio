@@ -1,129 +1,370 @@
+<!-- ...existing code... -->
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <title>My Portfolio</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio — Lâm Tiến Đạt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-bg"></div>
+  <div class="floating-blobs" aria-hidden="true">
+    <svg class="blob b1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="#7b6bff" d="M40.2,-62.1C50.7,-53.8,58.1,-44.1,64.6,-32.3C71.1,-20.5,76.8,-6.7,75.7,6.1C74.6,18.9,66.8,30.9,56.1,40.3C45.4,49.8,31.9,56.7,17,63.9C2.1,71.1,-13.5,78.6,-25.7,74C-37.9,69.4,-46.7,52.6,-54,36.6C-61.4,20.6,-67.4,5.4,-68.1,-10.4C-68.8,-26.2,-64.3,-42.9,-53.4,-53.7C-42.4,-64.5,-21.2,-69.4,-1.1,-68.1C19,-66.9,38,-60.4,40.2,-62.1Z" transform="translate(100 100)"/></svg>
+    <svg class="blob b2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="#ff73ff" d="M36.6,-52.8C49.1,-46.7,64.9,-39.3,71.2,-27.8C77.5,-16.2,74.3,-0.6,69.2,12.6C64.1,25.8,57.1,36.6,46.6,44.9C36.2,53.1,22.3,58.8,7.8,64.1C-6.6,69.5,-21.6,74.6,-33.8,70.5C-46,66.3,-55.5,53,-62,38.4C-68.5,23.8,-72.1,7.9,-71.2,-8.8C-70.3,-25.5,-64.9,-42.9,-53.7,-50.4C-42.5,-57.9,-21.2,-55.6,-3.1,-51.6C15,-47.7,30,-39,36.6,-52.8Z" transform="translate(100 100)"/></svg>
+  </div>
 
-    </head>
-    <body>
-    <div class="container">
-            <nav class="link">
-                <a href="https://dinhphucaz2005.github.io/Group/">HOME</a>
-                <a href="#about">About</a>
-                <a href="#language-skill">Language/Skill</a>
-                <a href="#project">Project</a>
-                <a href="#contact">Contact</a>
-            </nav>
-
-        <div class="main">
-            <img src="img/mypic.jpg" alt="Ảnh cá nhân" class="profile-picture">
-
-                <section class="profile">
-                    <h2>Profile</h2>
-                    <p>LÂM TIẾN ĐẠT</p>
-                    <p>Sinh Viên trường Đại Học Giao Thông Vận Tải</p>
-                    <p>Chuyên Ngành Công Nghệ Thông Tin</p>
-                    <p>Thành thạo HTML, CSS và 1 chút Java</p>
-                    <div class="image-row">
-                        <img src="img/pic1.jpg" alt="Pic 1" class="self">
-                        <img src="img/pic2.jpg" alt="Pic 2" class="self">
-                    </div>
-                </section>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand">
+        <img src="img/mypic.jpg" alt="Portrait" class="brand-portrait">
+        <div class="brand-info">
+          <h1 class="name">Lâm Tiến Đạt</h1>
+          <p class="tagline">Sinh viên CNTT • Frontend enthusiast • Game hobbyist</p>
         </div>
-        <section class="middle" id="about">
-            <div class="middle-content" >
-                <h2> About me </h2>
-                <p>Tôi tên là: Lâm Tiến Đạt, hiện tại đang là sinh viên năm 3 trường Đại Học Giao Thông Vận Tải, ngành Công Nghệ Thông Tin</p>
-                <p>Tính cách hòa đồng, vui vẻ, tuy hơi kém về mảng giao tiếp</p>
-                <p>Tôi có sở thích tập Gym, đánh cờ mỗi khi có thời gian rảnh</p>
-                <p>Mục tiêu hiện tại của tôi là thành thạo các ngôn ngữ lập trình - điểm yếu hiện tại của tôi</p>
+      </div>
+
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO / PROFILE -->
+      <section class="hero" id="about" data-reveal>
+        <div class="hero-card">
+          <h2>Giới thiệu ngắn</h2>
+          <p class="lead">
+            Tôi là Lâm Tiến Đạt — sinh viên năm 3 ngành Công nghệ thông tin (Đại học Giao Thông Vận Tải).<br>
+            Tôi chủ yếu hướng về frontend, thích tối ưu giao diện và trải nghiệm người dùng. Ngoài ra tôi phát triển
+            một số mini-game và đang học Spring Boot để mở rộng sang backend.<br>
+            Ngoài lập trình, tôi còn quan tâm đến những văn hóa phẩm Nhật Bản và tôi đang cân nhắc về việc học thêm các ngôn ngữ khác ngoài tiếng anh để thuận tiện cho việc tiếp cận những thứ mới
+          </p>
+
+          <div class="profile-meta">
+            <div><strong>Email:</strong> dat.ltd@ut.edu.vn</div>
+            <div><strong>SĐT:</strong> 0325555555</div>
+            <div><strong>Địa Chỉ:</strong> Hồ Chí Minh, Việt Nam</div>
+            <div><strong>Mục tiêu:</strong> Trở thành kỹ sư frontend/UX trong 2 năm tới</div>
+          </div>
+
+          <div class="stats">
+            <div class="stat" data-reveal>
+              <div class="stat-number" data-target="3">0</div>
+              <div class="stat-label">Năm học / Kinh nghiệm</div>
             </div>
-            <img src="img/Gym.jpg" alt="Ảnh Gym" class="gym-picture">
-            
-        </section>
-
-        <!-- CERTIFICATES & AWARDS -->
-        <section class="certificates" id="certificates">
-            <div class="section-content">
-                <h2>Certificates & Awards</h2>
-                <p>Không có</p>
+            <div class="stat" data-reveal>
+              <div class="stat-number" data-target="12">0</div>
+              <div class="stat-label">Dự án cá nhân</div>
             </div>
-        </section>
-
-
-        <!-- LANGUAGE / SKILL -->
-        <section class="language-skill" id="language-skill">
-            <div class="section-content">
-                <h2>Language & Skill</h2>
-                <p>Tôi đã và đang học các ngôn ngữ lập trình phổ biến như Java, HTML, CSS, và SQL.</p>
-                <p>Kỹ năng nổi bật của tôi là khả năng làm việc nhóm, khả năng học hỏi nhanh, và ứng phó với khó khăn khá tốt</p>
+            <div class="stat" data-reveal>
+              <div class="stat-number" data-target="8">0</div>
+              <div class="stat-label">Thư viện & component</div>
             </div>
+          </div>
+        </div>
 
-<!-- 🔹 Thanh tiến độ kỹ năng -->
+        <div class="hero-image" id="tilt-target" data-reveal>
+          <img src="img/mypic.jpg" alt="Portrait large" class="profile-picture">
+          <div class="image-glow"></div>
+        </div>
+      </section>
+
+      <!-- HOBBIES / SỞ THÍCH -->
+      <section class="hobbies" id="hobbies" data-reveal>
+        <h2>Sở thích</h2>
+        <p class="section-desc">Những hoạt động tôi làm khi rảnh rỗi — giúp duy trì sáng tạo, sức khỏe và kỹ năng kỹ thuật.</p>
+
+        <div class="hobby-grid">
+          <article class="project-card hobby-card" data-reveal>
+            <img src="img/Gym.jpg" alt="Gym" class="project-thumb">
+            <h3>Tập gym & Thể thao</h3>
+            <p>Tập luyện đều đặn để giữ sức khỏe, rèn tính kỷ luật và tăng năng lượng cho các dự án.</p>
+          </article>
+
+          <article class="project-card hobby-card" data-reveal>
+            <img src="img/AnhDep1.jpg" alt="Photography" class="project-thumb">
+            <h3>Chụp ảnh phong cảnh</h3>
+            <p>Chụp và chỉnh sửa ảnh giúp mình cải thiện con mắt thẩm mỹ cho thiết kế UI.</p>
+          </article>
+
+          <article class="project-card hobby-card" data-reveal>
+            <img src="img/pic1.jpg" alt="Game Dev" class="project-thumb">
+            <h3>Trải nghiệm những điều mới</h3>
+            <p>Tôi luôn hứng thú mới việc tìm tòi và khám phá những thứ mới mẻ, nhất là những việc liên quan đến sắc đẹp</p>
+          </article>
+
+          <article class="project-card hobby-card" data-reveal>
+            <img src="img/portpholio.png" alt="Design" class="project-thumb">
+            <h3>Thiết kế & Prototype</h3>
+            <p>Figma / mockup nhanh để thử layout và tương tác trước khi code.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="language-skill" id="skills" data-reveal>
+        <h2>Ngôn ngữ & Kỹ năng</h2>
+        <p class="section-desc">Chi tiết hơn: từng kỹ năng kèm công cụ, ví dụ thực tế và mức tự đánh giá.</p>
+
+        <div class="skill-grid">
+          <div class="skill-card" data-reveal>
+            <h3>Frontend</h3>
+            <p>HTML/CSS: xây dựng layout responsive, accessibility. JS/React: component, hooks, state management, tối ưu bundle.</p>
             <div class="skill-bars">
-                <div class="bar">
-                    <span style="width:60%">HTML/CSS — 80%</span>
-                </div>
-
-                <div class="bar">
-                    <span style="width:40%">JavaScript — 60%</span>
-                </div>
-
-                <div class="bar">
-                    <span style="width:20%">SQL — 40%</span>
-                </div>
+              <div class="bar" data-label="HTML / CSS" data-percent="92"><div class="bar-fill"></div><div class="bar-percent">0%</div></div>
+              <div class="bar" data-label="JavaScript" data-percent="78"><div class="bar-fill"></div><div class="bar-percent">0%</div></div>
+              <div class="bar" data-label="React" data-percent="74"><div class="bar-fill"></div><div class="bar-percent">0%</div></div>
             </div>
+          </div>
 
-
-            <div class="image-row">
-                <img src="img/java.png" alt="Java" class="skill-image">
-                <img src="img/HTML.png" alt="HTML CSS" class="skill-image">
+          <div class="skill-card" data-reveal>
+            <h3>Backend & DB</h3>
+            <p>Java / Spring Boot: API cơ bản, authentication, deploy; MySQL: thiết kế schema, tối ưu query.</p>
+            <div class="skill-bars">
+              <div class="bar" data-label="Java / Spring" data-percent="62"><div class="bar-fill"></div><div class="bar-percent">0%</div></div>
+              <div class="bar" data-label="SQL" data-percent="55"><div class="bar-fill"></div><div class="bar-percent">0%</div></div>
             </div>
-        </section>
+          </div>
 
-<!-- PROJECT -->
-        <section class="project" id="project">
-            <div class="section-content">
-                <h2>Projects</h2>
-                <p>Tôi đã thực hiện một số dự án nhỏ để rèn luyện kỹ năng, bao gồm trò chơi kéo búa bao hay cờ caro và website giới thiệu bản thân.</p>
-                <p>Mục tiêu sắp tới là phát triển một ứng dụng web hoàn chỉnh sử dụng Spring Boot và MySQL.</p>
+          <div class="skill-card" data-reveal>
+            <h3>Tools & Design</h3>
+            <p>Git, CI basics, Docker (cơ bản), Figma: prototype, design tokens.</p>
+            <div class="skill-bars">
+              <div class="bar" data-label="Git" data-percent="70"><div class="bar-fill"></div><div class="bar-percent">0%</div></div>
+              <div class="bar" data-label="Figma" data-percent="60"><div class="bar-fill"></div><div class="bar-percent">0%</div></div>
             </div>
+          </div>
+        </div>
 
-            <div class="project-links">
-                <a href="https://github.com/QuocViet-uth/Nhom17-Game-Rock-Paper-Scissors" target="_blank">
-                    🎮 Rock Paper Scissor Game
-                </a>
-                <a href="https://github.com/QuocViet-uth/Nhom17-Tro-Choi-Caro" target="_blank">
-                    ♟️ Caro Game
-                </a>
-            </div>
+        <div class="skill-icons" aria-hidden="true">
+          <img src="img/HTML.png" alt="Java" class="skill-image">
+          <img src="img/java.png" alt="HTML/CSS" class="skill-image">
+          <img src="img/dockerg.png" alt="React" class="skill-image">
+        </div>
+      </section>
 
-            <div class="image-row">
-                <img src="img/keobuabao.jpg" alt="Project 1" class="project-image">
-                <img src="img/cocaro.jpg" alt="Project 2" class="project-image">
-            </div>
-        </section>
+      <!-- CERTIFICATES / CHỨNG CHỈ & BẰNG CẤP -->
+      <section class="certificates" id="certificates" data-reveal>
+        <h2>Chứng chỉ &amp; Bằng cấp</h2>
+        <p class="section-desc">Không có</p>
+      </section>
 
-        <section class="contact" id="contact">
-            <div class="contact-content">
-                <h2>Contact Me</h2>
-                <div class="social-icons">
-            <a href="https://www.facebook.com/Dat.lt.2301/" target="_blank" class="social-icon">
-                <img src="img/facebook.png" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com/tiendat_1235/" target="_blank" class="social-icon">
-                <img src="img/social.png" alt="Instagram">
-            </a>
-            <a href="https://github.com/LamTienDat-077205008057" target="_blank" class="social-icon">
-                <img src="img/github-logo.png" alt="GitHub">
-            </a>
-                </div>
-            </div>
-        </section>
-    </div>
+      <!-- PROJECTS -->
+      <section class="project" id="projects" data-reveal>
+        <h2>Projects tiêu biểu</h2>
+        <p class="section-desc">Một số dự án thực tế và học tập tôi đã làm — hover để xem tương tác.</p>
+
+        <div class="projects-grid">
+          <article class="project-card" data-reveal>
+            <img src="img/keobuabao.jpg" alt="Rock Paper Scissors" class="project-thumb">
+            <h3>Rock Paper Scissors — Mini Game</h3>
+            <p>Game web đơn giản luyện JS, logic và animation.</p>
+            <a class="btn" href="https://github.com/QuocViet-uth/Nhom17-Game-Rock-Paper-Scissors" target="_blank">Xem</a>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <img src="img/cocaro.jpg" alt="Caro" class="project-thumb">
+            <h3>Caro — 2 người chơi</h3>
+            <p>Ứng dụng web chơi caro với logic cơ bản, có lưu trạng thái.</p>
+            <a class="btn" href="https://github.com/QuocViet-uth/Nhom17-Tro-Choi-Caro" target="_blank">Xem</a>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <img src="img/portpholio.png" alt="Portfolio" class="project-thumb">
+            <h3>Website giới thiệu cá nhân</h3>
+            <p>Trang hiện tại — tập trung UI/UX, responsive và hiệu ứng nhẹ.</p>
+            <a class="btn" href="#" target="_blank">Xem demo</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact" id="contact" data-reveal>
+        <h2>Contact</h2>
+        <p class="section-desc">Kết nối: tôi phản hồi nhanh qua email hoặc GitHub.</p>
+
+        <div class="contact-grid">
+          <div class="contact-card" data-reveal>
+            <strong>Email</strong>
+            <div>dat.ltd@ut.edu.vn</div>
+          </div>
+          <div class="contact-card" data-reveal>
+            <strong>GitHub</strong>
+            <div><a href="https://github.com/LamTienDat-077205008057" target="_blank">github.com/LamTienDat-077205008057</a></div>
+          </div>
+          <div class="contact-card social" data-reveal>
+            <strong>Social</strong>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/Dat.lt.2301/" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+              <a href="https://www.instagram.com/tiendat_1235/" target="_blank"><img src="img/social.png" alt="Instagram"></a>
+              </div>
+              <div class="contact-media">
+                <img src="img/pic2.jpg" alt="Hình liên hệ" class="contact-photo">
+              </div>
+          </div>
+        </div>
+      </section>
+      
+      
+<section class="contact-form-section" id="send-message" data-reveal>
+  <div class="container contact-form-card">
+    <h2>Gửi tin nhắn</h2>
+    <p class="small-desc">Hãy để lại thông tin, mình sẽ phản hồi trong vòng 24 giờ.</p>
+
+    <form class="contact-form" action="#" method="post" novalidate>
+      <div class="form-grid">
+        <label class="form-field">
+          <input type="text" name="name" placeholder=" " required>
+          <span class="label">Tên của bạn</span>
+        </label>
+
+        <label class="form-field">
+          <input type="email" name="email" placeholder=" " required>
+          <span class="label">Email của bạn</span>
+        </label>
+
+        <label class="form-field full">
+          <input type="text" name="subject" placeholder=" ">
+          <span class="label">Chủ đề</span>
+        </label>
+
+        <label class="form-field full textarea">
+          <textarea name="message" placeholder=" " rows="6" required></textarea>
+          <span class="label">Tin nhắn của bạn</span>
+        </label>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn send-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <path d="M22 2L11 13" stroke="#081028" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="#081028" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Gửi tin nhắn
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="site-footer">
+      <small>© 2025 Lâm Tiến Đạt — Portfolio demo</small>
+    </footer>
+  </div>
+
+  <script>
+
+    (function(){
+
+      const reveals = document.querySelectorAll('[data-reveal]');
+      const obs = new IntersectionObserver((entries, o) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('revealed');
+
+            e.target.querySelectorAll('[data-reveal-child]').forEach((ch,i) => {
+              ch.style.transitionDelay = (i*80) + 'ms';
+              ch.classList.add('revealed');
+            });
+            o.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      reveals.forEach(r => obs.observe(r));
 
 
-    </body>
+      const bars = document.querySelectorAll('.bar');
+      const barObserver = new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if (en.isIntersecting && !en.target.dataset.animated) {
+            const target = parseInt(en.target.getAttribute('data-percent') || '0', 10);
+            const fill = en.target.querySelector('.bar-fill');
+            const percent = en.target.querySelector('.bar-percent');
+            let cur = 0;
+            const step = Math.max(1, Math.floor(target / 40));
+            const t = setInterval(() => {
+              cur += step;
+              if (cur >= target) cur = target;
+              fill.style.width = cur + '%';
+              percent.textContent = cur + '%';
+              if (cur >= target) clearInterval(t);
+            }, 14);
+            en.target.dataset.animated = "1";
+            barObserver.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.28 });
+      bars.forEach(b => barObserver.observe(b));
+
+      // Counters
+      const statEls = document.querySelectorAll('.stat-number');
+      const counterObserver = new IntersectionObserver((entries, o) => {
+        entries.forEach(en => {
+          if (en.isIntersecting) {
+            const el = en.target;
+            if (!el.dataset.animated) {
+              const target = parseInt(el.getAttribute('data-target') || '0', 10);
+              let cur = 0;
+              const step = Math.max(1, Math.floor(target / 40));
+              const t = setInterval(() => {
+                cur += step;
+                if (cur >= target) cur = target;
+                el.textContent = cur;
+                if (cur >= target) clearInterval(t);
+              }, 25);
+              el.dataset.animated = '1';
+            }
+            o.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.4 });
+      statEls.forEach(s => counterObserver.observe(s));
+
+      // Tilt effect for hero and projects
+      function addTilt(el, intensity=8) {
+        el.addEventListener('mousemove', e => {
+          const rect = el.getBoundingClientRect();
+          const dx = e.clientX - rect.left - rect.width/2;
+          const dy = e.clientY - rect.top - rect.height/2;
+          const rx = (dy / rect.height) * -intensity;
+          const ry = (dx / rect.width) * intensity;
+          el.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) scale(1.02)`;
+        });
+        el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+      }
+      const tiltTarget = document.getElementById('tilt-target');
+      if (tiltTarget) addTilt(tiltTarget, 8);
+
+      document.querySelectorAll('.project-card').forEach(pc => addTilt(pc, 6));
+
+      // Parallax floating blobs follow mouse slightly
+      const blobsEl = document.querySelector('.floating-blobs');
+      if (blobsEl) {
+        window.addEventListener('mousemove', (e) => {
+          const x = (e.clientX / window.innerWidth - 0.5) * 40;
+          const y = (e.clientY / window.innerHeight - 0.5) * 40;
+          blobsEl.style.transform = `translate(${x}px, ${y}px)`;
+        });
+      }
+
+      // Nav smooth scroll
+      document.querySelectorAll('.nav a').forEach(a => {
+        a.addEventListener('click', (ev) => {
+          ev.preventDefault();
+          const id = a.getAttribute('href').slice(1);
+          const el = document.getElementById(id);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
+    })();
+  </script>
+</body>
 </html>
